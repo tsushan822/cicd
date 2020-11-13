@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: php
+  labels:
+    tier: backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: php
+      tier: backend
+  template:
+    metadata:
+      labels:
+        app: php
+        tier: backend
+    spec:
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - name: dir
+        hostPath:
+          path: /code
+      containers:
+      - name: php
+        image: 042002498327.dkr.ecr.eu-north-1.amazonaws.com/leaseaccounting:latest
+        volumeMounts:
+        - name: dir
+          mountPath: /code
+      initContainers:
+      - name: install
+        image: busybox
+        volumeMounts:
+        - name: dir
+          mountPath: /code
+        command:
+        - cp
+        - -r
+        - /var/www/.
+        - /code/app
