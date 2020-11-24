@@ -1,0 +1,791 @@
+/********************
+*** Colors ***
+*********************/
+@import "partials/colors";
+/********************
+*** Font Awesome ***
+*********************/
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+/********************
+*** jQuery-UI datapicker***
+*********************/
+@import "jquery-ui-1-12-1-custom/jquery-ui.css";
+@import "jquery-ui-1-12-1-custom/jquery-ui.theme.css";
+/********************
+*** Datatables ***
+*********************/
+@import "partials/dataTables.min.css";
+@import "partials/_awesome-bootstrap-checkbox";
+@import "_fonts";
+@import '~bootstrap/scss/bootstrap.scss';
+@import "scss/mdb";
+@import "partials/chartjs";
+@import "partials/datatables-override";
+/********************
+*** Select2-multiselect***
+*********************/
+@import "~select2/dist/css/select2.min.css";
+/********************
+*** Structural overrides***
+*********************/
+@import "partials/structuralOverrides.scss";
+
+/********************
+***Lease form classes***
+*********************/
+.paddingtopfixerlease {
+  padding-top: 13px !important;
+}
+
+.lease_ui_block {
+  border: #ededed;
+  border-top: 0 !important;
+  padding: 0px 0px;
+
+  h1 {
+    color: $SCARPA_FLOW;
+    text-align: left;
+    margin-left: 1.4rem;
+    font-weight: 500;
+    font-size: .8rem;
+    margin-bottom: 7px;
+  }
+
+  p {
+    text-align: justify;
+    padding: .5rem 1.5rem;
+    color: rgb(162, 163, 164);
+  }
+
+  .row {
+    margin-left: -30px;
+  }
+
+  .row-set-todefault {
+    margin-right: -14px;
+    margin-left: -6px;
+  }
+}
+
+.lease_ui_ul {
+  padding-left: 0rem;
+  margin-left: 1.5rem;
+}
+
+.lease_ui_block li {
+  font-size: 10px;
+  margin-bottom: 0.3rem;
+  text-align: left !important;
+}
+
+.lease_pills .nav {
+  position: relative;
+  overflow-x: auto;
+  white-space: nowrap;
+  border-radius: 0.3rem 0.3rem 0 0;
+}
+
+.lease_pills .nav-link.active {
+  color: $DOVE_GRAY !important;
+  background-color: unset !important;
+  box-shadow: unset !important;
+  padding: 5px 6px !important;
+}
+
+.lease_pills .nav-link.active:hover {
+  box-shadow: unset !important;
+}
+
+.lease_pills .nav-link {
+  color: $DOVE_GRAY !important;
+  background-color: unset !important;
+  box-shadow: unset !important;
+  padding: 5px 6px !important;
+}
+
+.lease_pills li {
+  padding: 0.2rem !important;
+}
+
+.lease_pills .nav li a {
+  padding: 5px 6px !important;
+  font-size: .7rem !important;
+}
+
+/********************
+***Dashboard lease type card and other css***
+*********************/
+.card.card-cascade.narrower, .cascading-admin-card {
+  margin-top: 1.25rem;
+}
+
+.cascading-admin-card .admin-up {
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-top: -1.25rem;
+}
+
+.cascading-admin-card .admin-up .fab, .cascading-admin-card .admin-up .far, .cascading-admin-card .admin-up .fas {
+  padding: 1.7rem;
+  font-size: 2rem;
+  color: #fff;
+  text-align: left;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.cascading-admin-card .admin-up .data {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.cascading-admin-card .admin-up .data p {
+  color: #999;
+  font-size: 12px;
+}
+
+.progress, .progress .progress-bar {
+  height: 6px;
+}
+
+.customColPadding {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+/********************
+***Backgrounds***
+*********************/
+.malachite-background {
+  background: $MALACHITE !important;
+}
+
+.golden_fizz-background {
+  background: $GOLDEN_FIZZ !important;
+}
+
+.dodger_blue-background {
+  background: $DODGER_BLUE !important;
+}
+
+.sunset_orange-background {
+  background: $SUNSET_ORANGE !important;
+}
+
+.jungle_green-background {
+  background: $JUNGLE_GREEN !important;
+}
+
+.pizazz-background {
+  background: $PIZAZZ !important;
+}
+
+.white-skin .primary-color,
+.white-skin ul.stepper li.active a .circle,
+ul.stepper li.active a .white-skin .circle,
+.white-skin ul.stepper li.completed a .circle,
+ul.stepper li.completed a .white-skin .circle {
+  background-color: $CERULEAN !important;
+}
+
+.primary-background {
+  background-color: $CURIOUS_BlUE !important;
+}
+
+.blue-gradient {
+  background: linear-gradient(40deg, $SHIP_COVE, $SAN_MARINO) !important;
+}
+
+.switch label input[type=checkbox]:checked + .lever {
+  background-color: $CORNFLOWER_BLUE;
+}
+
+.switch label input[type=checkbox]:checked + .lever:after {
+  left: 1.5rem;
+  background-color: $CORNFLOWER_BLUE;
+}
+
+input[readonly='readonly'] {
+  background-color: $ATHENS_GRAY !important;
+}
+
+input[type="text"]:disabled {
+  background: $MISCHKA !important;
+  position: relative;
+  top: .4rem;
+}
+
+.header_ui_background {
+  background: #028CDE;
+  color: $WHITE;
+}
+
+.picker__date-display {
+  background: $CURIOUS_BlUE !important;
+}
+
+.pills-info .nav-link.active {
+  background-color: $SHIP_COVE !important;
+}
+
+.btn-info {
+  background-color: $SHIP_COVE !important;
+}
+
+.dropdown .dropdown-menu .dropdown-item:hover {
+  background-color: $CURIOUS_BlUE !important;
+}
+
+/********************
+*** Media Queries***
+*********************/
+@media (min-width: 62em) {
+  .classic-tabs .nav li:first-child {
+    margin-left: 13px;
+  }
+}
+
+@media (max-width: 926px) and (min-width: 192px) {
+  .lease-report-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20%;
+    left: 20%;
+  }
+}
+
+@media (max-width: 960px) and (min-width: 192px) {
+  .top_header {
+    display: none !important;
+  }
+  .navbar-la-mobile {
+    background: #008cde !important;
+    display: flex !important;
+  }
+  .header_ui_area {
+    padding: 1rem;
+  }
+  .content_ui {
+    padding: 1rem;
+  }
+  .navbar .dropdown-menu {
+    position: static !important;
+  }
+  .dropdown-item {
+    text-align: center;
+  }
+  .white-skin .navbar .navbar-nav .nav-item a {
+    color: #424242;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 850px) and (min-width: 769px) {
+  .module_link_area ul li a {
+    margin-right: .7rem;
+  }
+  .top_header_left img {
+    width: 100px
+  }
+}
+
+/********************
+***Helper classes***
+*********************/
+
+.borderForm {
+  border-bottom: 1px solid $MISCHKA;
+}
+
+.borderFormImportant {
+  border-bottom: 1px solid $MISCHKA !important;
+}
+
+.boxShadowRemoval {
+  box-shadow: none !important;
+}
+
+.borderRemoval {
+  border: unset !important;
+}
+
+.borderRadiusRemoval {
+  border-radius: unset !important;
+}
+
+.borderRadiusRemoval {
+  border-radius: 0 !important;
+}
+
+.unsetCardBorder {
+  border: unset !important;
+}
+
+.paddingBottomNone {
+  padding-bottom: 0px !important;
+}
+
+.opacityUnset {
+  opacity: unset !important;
+}
+
+.vhheight100 {
+  height: 80vh !important;
+}
+
+.fitContent {
+  width: fit-content !important;
+}
+
+.bq-primary {
+  border-left: 3px solid $CURIOUS_BlUE !important;
+}
+
+.content_with_action {
+  display: block;
+}
+
+.content_ui {
+  padding: 0.5rem 5rem;
+}
+
+.columnReverseFlex {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.text-decoration-underline-with-margin-zero {
+  text-decoration: underline !important;
+  margin: 0 !important;
+}
+
+/********************
+***Header classes***
+*********************/
+.header_ui_area {
+  padding: .5rem 5rem;
+}
+
+.top_header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top_header img {
+  width: 80px;
+}
+
+.top_header svg {
+  fill: $WHITE;
+}
+
+.top_header_left {
+  width: fit-content !important;
+  width: -moz-fit-content !important;
+  text-align: left !important;
+}
+
+.top_header_right {
+  width: fit-content !important;
+  width: -moz-fit-content !important;
+}
+
+.header_ui_ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.top_header_a {
+  position: relative;
+  top: 6px;
+  margin-left: 1.3rem;
+}
+
+.header_ui_ul li a i {
+  font-size: 1rem;
+}
+
+.header_ui_ul li a span {
+  display: none !important;
+}
+
+.header_ui_ul li a .inlineBlock {
+  display: inline-block !important;
+}
+
+.header_ui_ul li a:after {
+  display: none !important;
+}
+
+.module_link_area {
+  margin-top: 13px;
+}
+
+.module_link_area ul {
+}
+
+.module_link_area ul li {
+  padding: 0rem !important;
+}
+
+.module_link_area ul li a {
+  color: $DOVE_GRAY;
+  text-align: center;
+  border-radius: 2px;
+  transition: all 0.4s;
+  padding: 0;
+  margin-right: 3.125rem;
+  color: $WHITE !important;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  padding-bottom: 2px;
+  text-decoration: none;
+}
+
+.module_link_area ul li a.active {
+  background-color: $LOCHMARA !important;
+  box-shadow: unset !important;
+  font-weight: bold;
+  padding: 0rem .5rem;
+}
+
+.header_ui_area,
+.content_ui {
+  max-width: 2000px;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/********************
+***Form and inputs classe***
+*********************/
+
+.close {
+  color: $WHITE
+}
+
+
+//buttons
+.headingandbuttons {
+  margin-left: 0.5rem !important;
+  margin-right: 0.5rem !important;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border: 0;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  padding: 0rem 1rem;
+  background-color: $WHITE;
+}
+
+.btn .fa.fa-sm {
+  font-size: 1rem;
+  margin-top: -5px;
+}
+
+.btn-outline-info {
+  color: $SHIP_COVE !important;
+  border: 2px solid $SHIP_COVE !important;
+}
+
+.lease-report-button {
+  position: absolute;
+  bottom: 20px;
+  right: 25%;
+  left: 25%;
+}
+
+//inputs
+.md-form .form-control:disabled,
+.md-form .form-control[readonly] {
+  background-color: $MISCHKA;
+  border-bottom: 1px solid #bdbdbd;
+
+}
+
+.md-form label.active {
+  z-index: 2;
+  top: .4rem !important;
+  font-size: 0.7rem;
+}
+
+.md-form {
+  position: relative;
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+  font-size: .7rem;
+}
+
+.md-form .form-control {
+  margin: 0 0 0.5rem 0;
+  font-size: .7rem;
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 38px;
+  padding: 0;
+}
+
+.select-wrapper + label.active {
+  top: .9rem;
+  left: 15px;
+  font-size: 0.7rem;
+  transform: translateY(-14px);
+}
+
+.select-wrapper input.select-dropdown {
+  margin: 0 0 .5rem 0;
+  font-size: .7rem;
+}
+
+//tabs and pills
+
+
+.classic-tabs .nav {
+  border-radius: unset !important;
+}
+
+.zen_tab {
+  display: none
+
+}
+
+.zen_tab ul li a {
+  margin: 0.5rem 0.5rem;
+  padding: 0rem;
+}
+
+.zen_tab ul li a.active {
+  border-bottom: 1px solid;
+}
+
+
+.accordion_inner_title_font_size {
+  font-size: 13px !important;
+}
+
+.md-pills .nav-link {
+  color: $WHITE;
+  text-align: center;
+  border-radius: 2px;
+  transition: all 0.4s;
+}
+
+/********************
+***Card and buttons***
+*********************/
+.card.card-cascade .view.view-cascade.gradient-card-header {
+  background: $CURIOUS_BlUE !important;
+  color: $WHITE;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 40px;
+  padding: 10px 25px;
+}
+
+.card {
+  background-color: $WHITE;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+.card-header {
+  background-color: $WHITE !important;
+  color: $TUNDORA !important;
+  border-bottom: 1px solid $PORCELAIN;
+}
+
+.white-skin .btn-primary {
+  color: $BRIGHT_TURQUOISE;
+  background-color: $WHITE !important;
+}
+
+.white-skin .btn-primary:hover {
+  color: $BRIGHT_TURQUOISE !important;
+}
+
+.white-skin .btn-primary-variant-one {
+  color: $CERULEAN;
+  background-color: $WHITE !important;
+}
+
+.white-skin .btn-primary-variant-one:hover {
+  color: $CERULEAN !important;
+}
+
+.white-skin .btn-primary-variant-main {
+  color: $WHITE;
+  background-color: $CERULEAN !important;
+}
+
+.white-skin .btn-primary-variant-main:hover {
+  color: $WHITE !important;
+}
+
+.white-skin .btn-primary-variant-alert {
+  color: $WHITE;
+  background-color: $RED !important;
+}
+
+.white-skin .btn-primary-variant-alert:hover {
+  color: $WHITE;
+}
+
+.cardSimiliarShadow {
+  border: 1px solid rgba(0, 0, 0, 0.125) !important;
+  border-radius: 0.25rem !important;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+}
+
+.card-box-shadow {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+}
+
+/********************
+***Miscellaneous***
+*********************/
+#form-error-alert {
+  display: none;
+}
+
+.close {
+  color: $BLACK !important;
+}
+
+[aria-busy=true] {
+  cursor: default !important;
+}
+
+.invalid-feedback {
+  display: flex !important;
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 100% !important;
+  color: $RED !important;
+}
+
+.trialbar a {
+  color: $CERULEAN;
+}
+
+.trialbar {
+  color: $RADICAL_RED !important;
+  background-color: unset !important;
+  border-color: unset !important;
+  font-size: 1.3rem;
+}
+
+.trialbar i {
+  color: $RADICAL_RED !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled,
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+  color: $DOVE_GRAY !important;
+}
+.dataTables_processing {
+  position: absolute;
+  top: 50% !important;
+  left: 50% !important;
+  width: 220px !important;
+  margin-left: -100px !important;
+  margin-top: -26px !important;
+  text-align: center !important;
+  padding: 1em 0 !important;
+  border: 1px solid white !important;
+  background: $CERULEAN !important;
+  height: 60px !important;
+  color: white !important;
+  box-shadow: 0 2px 5px 0 rgb(117 117 117), 0 2px 10px 0 rgb(117 117 117) !important;
+  z-index: 999999999;
+}
+.minWidthhFitContent {
+  min-width: fit-content;
+}
+
+.marginTopOnePx {
+  margin-top: 1px !important;
+}
+
+.dataTables_empty {
+  text-align: center !important;
+}
+
+.new_account_company {
+  position: relative;
+  top: -23px;
+}
+
+.new_account_roles {
+  position: relative;
+  top: -29px;
+}
+
+.chip {
+  height: fit-content;
+}
+
+.dashboard-custom-spinner{
+  color:$DODGER_BLUE;
+  width: 3rem;
+  height: 3rem;
+}
+.dashboard-custom-spinner-area{
+  min-height: 97vh;
+}
+
+
+.total_lease {
+  color: #fff;
+  text-align: center;
+  background: #028CDE;
+  border-radius: 18px;
+  font-size: 12px;
+  padding: .2rem;
+}
+
+.highlight5{
+  color: #C0C0C0 !important;
+}
+
+.made_with_love{
+  span{
+    margin-left: 2px;
+    img{
+      position: relative;
+      left: -3px;
+      top: -1px;
+    }
+  }
+}
+
+@media (max-width: 960px) and (min-width: 192px) {
+  .header_ui_area {
+    padding: unset;
+  }
+  .content_ui {
+    padding: unset;
+  }
+
+}
+/*Footer related css*/
+.footer-icons-area-holder{
+  i{
+    color: $CURIOUS_BlUE !important;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 192px) {
+  .copyright_area_footer{
+    width: 100%;
+    margin-top: 1rem;
+  }
+}

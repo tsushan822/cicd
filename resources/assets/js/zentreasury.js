@@ -1,0 +1,10 @@
+require('./vendor/datatables/dataTables.buttons.min.js');
+require('./vendor/datatables/buttons.bootstrap.min.js');
+require('./vendor/datatables/buttons.flash.min.js');
+require('./vendor/datatables/buttons.html5.min.js');
+require('./vendor/datatables/buttons.print.min.js');
+require('./vendor/datatables/jszip.min.js');
+require('./vendor/datatables/pdfmake.min.js');
+require('./vendor/datatables/vfs_fonts.js');
+require('./vendor/datatables/datatable.min.js');
+require('select2/dist/js/select2.js');

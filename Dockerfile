@@ -1,18 +1,49 @@
-# This is a multi-stage build. First we are going to compile and then
-# create a small image for runtime.
-FROM golang:1.11.1 as builder
+FROM php:7.4-fpm
 
-RUN mkdir -p /go/src/github.com/eks-workshop-sample-api-service-go
-WORKDIR /go/src/github.com/eks-workshop-sample-api-service-go
-RUN useradd -u 10001 app
-COPY . .
-RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main .
+RUN apt-get update && \
+  DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    libpq-dev \
+    libfreetype6-dev \
+    libjpeg62-turbo-dev \
+    libmcrypt-dev \
+    libbz2-dev \
+    cron \
+    unzip \
+    git \
+    libxml2-dev \
+    npm \
+    vim \
+    supervisor \
+    && pecl channel-update pecl.php.net \
+    && pecl install apcu
 
-FROM scratch
+RUN apt-get install -y libzip-dev
 
-COPY --from=builder /go/src/github.com/eks-workshop-sample-api-service-go/main /main
-COPY --from=builder /etc/passwd /etc/passwd
-USER app
+#RUN addgroup -g 1000 laravel && adduser -G laravel -g laravel -s /bin/sh -D laravel
 
-EXPOSE 8080
-CMD ["/main"]
+RUN mkdir -p /var/www/html
+
+WORKDIR /var/www/html/
+
+COPY ./ /var/www/html
+
+COPY ./docker/laravel-worker.conf /etc/supervisor/conf.d/laravel-worker.conf
+
+RUN docker-php-ext-install pdo pdo_mysql soap zip gd
+
+#installing Composers
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+RUN composer update
+
+RUN chmod -R 777 /var/www/html/storage
+
+RUN php artisan key:gen
+
+RUN npm install npm@latest -g cross-env
+
+RUN npm cache clean --force
+
+RUN npm run dev
+
+EXPOSE 9000

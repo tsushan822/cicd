@@ -1,0 +1,64 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 1, 2016, 2:07:05 PM
+    Author     : Lasse
+*/
+
+.ht_master tr td {
+  background-color: #f7f7f7;
+}
+/* All headers */
+.handsontable th {
+
+    height:20px!important;
+  font-weight: bold;
+      background-color: transparent;
+      padding: 0px 0px 10px 0px!important;
+    border-bottom: 1px solid #111;
+    border-top: none;
+     border-left: none;
+     border-right: none;
+    text-align: left!important;
+}
+
+.handsontable { font-size: 10px;
+                   font-family: 'Roboto', sans-serif;
+                      
+}
+.handsontable .htDimmed {
+    color: #333;
+}
+/* Every odd row */
+.ht_master tr:nth-of-type(odd) > td {
+
+  background-color: #f9f9f9;
+}
+
+/* Every even row */
+.ht_master tr:nth-of-type(even) > td {
+  background-color: #ffffff;
+}
+/* Every even row */
+.ht_master tr:last-child > td {
+ height:20px!important;
+  font-weight: bold;
+      background-color: transparent;
+      
+    border-bottom: none!important;
+    border-top: none!important;
+     border-left: none!important;
+     border-right: none!important;
+      
+}
+
+.handsontable .formula {
+    font-weight: bold;
+    
+    
+    
+    border-top: 1px solid #111;
+}

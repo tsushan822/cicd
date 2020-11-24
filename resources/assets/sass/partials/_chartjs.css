@@ -1,0 +1,28 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 1, 2017, 3:39:02 PM
+    Author     : Lasse
+*/
+
+.chart-legend li span{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}
+.chart-legend {
+
+}
+ul
+{font-size: 12px;
+ list-style-type: none;
+}
+
+ul
+{font-size: 12px;
+ list-style-type: none;
+}

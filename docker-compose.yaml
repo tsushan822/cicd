@@ -1,0 +1,53 @@
+version: '3.3'
+
+networks:
+  laravel:
+
+services:
+  webserver:
+    build:
+      context: ./docker
+      dockerfile: nginx.dockerfile
+    networks:
+      - laravel
+    container_name: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - .:/var/www/html:delegated
+    depends_on: 
+      - php
+
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - laravel
+    container_name: php
+    volumes:
+      - .:/var/www/html:delegated
+    ports:
+      - "9000:9000"
+    depends_on: 
+      - mysql
+     
+
+  mysql:
+    image: mysql:5.7.22
+    environment:
+      MYSQL_USER: zenlease
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: zenlease
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    container_name: mysql
+    networks:
+      - laravel
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "3306:3306"
+    volumes: 
+      - ./docker/mysql:/var/lib/mysql:delegated
