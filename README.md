@@ -43,7 +43,7 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 - [UserInsights](https://userinsights.com)
 - [Fragrantica](https://www.fragrantica.com)
 - [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
+- [User10](https://user10.com)sdfsda
 - [Soumettre.fr](https://soumettre.fr/)
 - [CodeBrisk](https://codebrisk.com)
 - [1Forge](https://1forge.com)
