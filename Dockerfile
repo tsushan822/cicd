@@ -38,7 +38,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 RUN chmod -R 777 /var/www/html/storage
 
-RUN php artisan key:gen
+#RUN php artisan key:gen
 
 RUN npm install npm@latest -g cross-env
 
