@@ -3,11 +3,11 @@ version: 0.2
 phases:
   install:
     commands:
-      - curl -sS -o aws-iam-authenticator https://amazon-eks.s3-us-west-2.amazonaws.com/1.10.3/2018-07-26/bin/linux/amd64/aws-iam-authenticator
+      - curl -sS -o aws-iam-authenticator https://amazon-eks.s3.us-west-2.amazonaws.com/1.18.9/2020-11-02/bin/linux/amd64/aws-iam-authenticator
       - curl -sS -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.17.12/2020-11-02/bin/darwin/amd64/kubectl
       - chmod +x ./kubectl ./aws-iam-authenticator
       - export PATH=$PWD/:$PATH
-      - apt-get update && apt-get -y install python3-pip && pip3 install --upgrade awscli
+      - apt-get update && apt-get -y install python3-pip && pip3 install --upgrade awscli && apt-get -y jq
   pre_build:
       commands:
         - TAG="$REPOSITORY_NAME.$REPOSITORY_BRANCH.$ENVIRONMENT_NAME.$(date +%Y-%m-%d.%H.%M.%S).$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 8)"
@@ -26,7 +26,6 @@ phases:
       - export AWS_SESSION_TOKEN="$(echo ${CREDENTIALS} | jq -r '.Credentials.SessionToken')"
       - export AWS_EXPIRATION=$(echo ${CREDENTIALS} | jq -r '.Credentials.Expiration')
       - aws eks update-kubeconfig --name $EKS_CLUSTER_NAME
-      - aws s3 ls
       - kubectl get pods
       - printf '[{"name":"hello-k8s","imageUri":"%s"}]' $REPOSITORY_URI:$TAG > build.json
 artifacts:
