@@ -46,6 +46,10 @@ RUN php artisan key:gen
 
 RUN npm install npm@latest -g cross-env
 
+RUN npm install webpack
+
+RUN npm install --global cross-env
+
 RUN npm cache clean --force
 
 RUN npm run dev
