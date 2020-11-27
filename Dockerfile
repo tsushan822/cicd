@@ -1,4 +1,4 @@
-FROM php:7.4-fpm
+FROM 716339830679.dkr.ecr.us-east-1.amazonaws.com/php7.4-fpm:latest
 
 RUN apt-get update && \
   DEBIAN_FRONTEND=noninteractive apt-get install -y \
@@ -52,6 +52,6 @@ RUN npm install --global cross-env
 
 RUN npm cache clean --force
 
-RUN npm run dev
+# RUN npm run dev
 
 EXPOSE 9000
