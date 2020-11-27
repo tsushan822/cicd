@@ -33,12 +33,12 @@ RUN docker-php-ext-install pdo pdo_mysql soap zip gd
 
 RUN chmod -R 777 /var/www/html/storage
 
+RUN mkdir sessions views cache
+
 #installing Composers
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 RUN composer update
-
-RUN chmod -R 777 /var/www/html/storage
 
 RUN php artisan key:gen
 
