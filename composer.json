@@ -44,7 +44,7 @@
         "superbalist/laravel-google-cloud-storage": "^2.2",
         "teamtnt/laravel-scout-tntsearch-driver": "^10.0",
         "tohidplus/laravel-vue-translation": "^2.0",
-        "writingink/wink": "^0.2.0",
+        "themsaid/wink": "^0.2.0",
         "yajra/laravel-datatables-buttons": "^4.0",
         "yajra/laravel-datatables-oracle": "~9.0",
         "zenlease/module-usage": "*"
@@ -52,7 +52,6 @@
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.2",
         "facade/ignition": "^2.0",
-        "fzaninotto/faker": "^1.9.1",
         "laravel/dusk": "^6.4",
         "mockery/mockery": "^1.3.1",
         "nunomaduro/collision": "^4.1",
@@ -94,9 +93,6 @@
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-        ],
-        "post-create-project-cmd": [
-            "@php artisan key:generate --ansi"
         ]
     },
     "repositories": [
