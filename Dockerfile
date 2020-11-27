@@ -42,6 +42,8 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 RUN composer update
 
+RUN service supervisor start
+
 RUN php artisan key:gen
 
 RUN npm install npm@latest -g cross-env
