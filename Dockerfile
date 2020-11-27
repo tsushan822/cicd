@@ -31,6 +31,8 @@ COPY ./docker/laravel-worker.conf /etc/supervisor/conf.d/laravel-worker.conf
 
 RUN docker-php-ext-install pdo pdo_mysql soap zip gd
 
+RUN chmod -R 777 /var/www/html/storage
+
 #installing Composers
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
