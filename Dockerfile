@@ -1,4 +1,4 @@
-FROM php7.4-fpm
+FROM php:7.4-fpm
 
 RUN apt-get update && \
   DEBIAN_FRONTEND=noninteractive apt-get install -y \
