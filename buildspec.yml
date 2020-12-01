@@ -24,7 +24,7 @@ phases:
       - export AWS_SECRET_ACCESS_KEY="$(echo ${CREDENTIALS} | jq -r '.Credentials.SecretAccessKey')"
       - export AWS_SESSION_TOKEN="$(echo ${CREDENTIALS} | jq -r '.Credentials.SessionToken')"
       - export AWS_EXPIRATION=$(echo ${CREDENTIALS} | jq -r '.Credentials.Expiration')
-      - aws eks --region us-east-1 update-kubeconfig --name $EKS_CLUSTER_NAME
+      - aws eks --region eu-north-1 update-kubeconfig --name $EKS_CLUSTER_NAME
       - export KUBECONFIG=$HOME/.kube/config
       - kubectl get pods
       - printf '[{"name":"hello-k8s","imageUri":"%s"}]' $REPOSITORY_URI:$TAG > build.json
